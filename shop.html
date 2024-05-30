@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        body {
+            background-image: url("assets/images/background/bg-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* .card {
+            margin: 10px 0px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px; font-weight: 500;"><strong
+                    class="text-dark">Tech</strong>Labs<b class="text-dark">.</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="ml-3">
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-dark">
+        <div class="container bg-dark">
+            <ol class="breadcrumb bg-dark">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shop</li>
+            </ol>
+        </div>
+    </nav>
+
+
+    <!-- Search and Filter Section -->
+    <section id="search-filter" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <input type="text" id="search-bar" class="form-control" placeholder="Search products...">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <select id="category-filter" class="form-control">
+                        <option value="">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home & Kitchen</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <select id="sort-filter" class="form-control">
+                        <option value="default">Sort by</option>
+                        <option value="price-low-high">Price: Low to High</option>
+                        <option value="price-high-low">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="product-grid" class="py-5">
+        <div class="container">
+            <div class="row" id="product-container">
+                <!-- Product cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination Section -->
+    <section id="pagination" class="py-5">
+        <div class="container text-center">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <!-- Pagination items will be dynamically inserted here -->
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="p-4 bg-light text-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-warning text-decoration-none" href="index.html">
+                        <h5 style="font-size: 30px; font-weight: 500;"><strong class="text-dark">Tech</strong>Labs<b
+                                class="text-dark">.</b></h5>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>Designed and built with all the love in the world by the TechLabs. team with the help
+                                of our contributors.</p>
+                        </li>
+                        <li>
+                            <p>Code licensed MIT, docs CC BY 3.0.</p>
+                        </li>
+                        <li>
+                            <p>Analytics by Shubham Khandge.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about-us.html" class="text-dark">About Us</a></li>
+                        <li><a href="shop.html" class="text-dark">Shop</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact-us.html" class="text-dark">Email</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Phone</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-3">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center col-md-12 py-2" style="font-size: 20px;"><b>&copy;</b>2024
+                        <strong>Tech</strong><b class="text-warning">Labs</b><b>.</b> All rights reserved.
+                    </p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const products = [
+                { id: 1, name: "Product 1", price: 100, category: "electronics", rating: 4.5, image: "assets/images/product/p1.jpg" },
+                { id: 2, name: "Product 2", price: 150, category: "fashion", rating: 4.0, image: "assets/images/product/p2.jpg" },
+                { id: 3, name: "Product 3", price: 200, category: "home", rating: 3.5, image: "assets/images/product/p3.jpg" },
+                { id: 4, name: "Product 4", price: 250, category: "electronics", rating: 5.0, image: "assets/images/product/p4.jpg" },
+                { id: 5, name: "Product 5", price: 300, category: "fashion", rating: 4.5, image: "assets/images/product/p5.jpg" },
+                { id: 6, name: "Product 6", price: 350, category: "home", rating: 4.0, image: "assets/images/product/p6.jpg" },
+                { id: 6, name: "Product 6", price: 350, category: "home", rating: 4.0, image: "assets/images/product/p6.jpg" },
+            ];
+
+            let currentPage = 1;
+            const itemsPerPage = 12;
+
+            function renderProducts() {
+                const productContainer = document.getElementById('product-container');
+                productContainer.innerHTML = "";
+
+                const filteredProducts = getFilteredProducts();
+                const paginatedProducts = paginate(filteredProducts, currentPage, itemsPerPage);
+
+                paginatedProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('col', 'col-xl-3', 'col-lg-3', 'col-md-4', 'col-sm-12', 'mb-4');
+                    productCard.innerHTML = `
+                          <div class="card h-100">
+                              <img src="${product.image}" class="card-img-top img-fluid p-3" alt="${product.name}">
+                              <div class="card-body">
+                                  <h5 class="card-title">${product.name}</h5>
+                                  <p class="card-text">₹ ${product.price}</p>
+                                  <p class="card-text">Rating: ${product.rating}</p>
+                                  <a href="cart.html" class="btn btn-primary">Add to Cart</a>
+                              </div>
+                          </div>
+                      `;
+                    productContainer.appendChild(productCard);
+                });
+
+                renderPagination(filteredProducts.length);
+            }
+
+            function renderPagination(totalItems) {
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+                const paginationContainer = document.querySelector('.pagination');
+                paginationContainer.innerHTML = "";
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const paginationItem = document.createElement('li');
+                    paginationItem.classList.add('page-item');
+                    if (i === currentPage) {
+                        paginationItem.classList.add('active');
+                    }
+                    paginationItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                    paginationItem.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        currentPage = i;
+                        renderProducts();
+                    });
+                    paginationContainer.appendChild(paginationItem);
+                }
+            }
+
+            function paginate(items, page, itemsPerPage) {
+                const start = (page - 1) * itemsPerPage;
+                return items.slice(start, start + itemsPerPage);
+            }
+
+            function getFilteredProducts() {
+                const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+                const selectedCategory = document.getElementById('category-filter').value;
+                const sortOption = document.getElementById('sort-filter').value;
+
+                let filteredProducts = products.filter(product => {
+                    return (
+                        product.name.toLowerCase().includes(searchQuery) &&
+                        (selectedCategory === "" || product.category === selectedCategory)
+                    );
+                });
+
+                if (sortOption === "price-low-high") {
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                } else if (sortOption === "price-high-low") {
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                } else if (sortOption === "rating") {
+                    filteredProducts.sort((a, b) => b.rating - a.rating);
+                }
+
+                return filteredProducts;
+            }
+
+            document.getElementById('search-bar').addEventListener('input', renderProducts);
+            document.getElementById('category-filter').addEventListener('change', renderProducts);
+            document.getElementById('sort-filter').addEventListener('change', renderProducts);
+
+            renderProducts();
+        });
+    </script>
+</body>
+
+</html>

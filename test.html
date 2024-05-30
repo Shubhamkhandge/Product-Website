@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechLabs.</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #044c8c;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" style="font-size: 30px; color: rgb(255, 255, 35); font-weight: 500;"><b
+          class="text-light">Tech</b>Labs<b class="text-light">.</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto text-uppercase" style="font-weight: 600; letter-spacing: 1px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><span><i class="fa fa-home" aria-hidden="true"></i></span> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span></span> Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Login form goes here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero-shop" class="d-flex align-items-center"
+    style="background: url('assets/images/background/background1.jpg') center center / cover no-repeat;">
+    <div class="container text-center">
+      <h1 class="text-white">Shop</h1>
+      <p class="text-white">Discover our range of products</p>
+    </div>
+  </section>
+
+  <!-- Search and Filter Section -->
+  <section id="search-filter" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <input type="text" id="search-bar" class="form-control" placeholder="Search products...">
+        </div>
+        <div class="col-md-4 mb-3">
+          <select id="category-filter" class="form-control">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+            <option value="home">Home & Kitchen</option>
+          </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <select id="sort-filter" class="form-control">
+            <option value="default">Sort by</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <section id="product-grid" class="py-5">
+    <div class="container">
+      <div class="row" id="product-container">
+        <!-- Product cards will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Pagination Section -->
+  <section id="pagination" class="py-5">
+    <div class="container text-center">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <!-- Pagination items will be dynamically inserted here -->
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>YourCompany - We bring the best products to you.</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          },
+          600: {
+            items: 3,
+            nav: false
+          },
+          1000: {
+            items: 4,
+            nav: true,
+            loop: false
+          }
+        }
+      })
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const products = [
+        { id: 1, name: "Product 1", price: 100, category: "electronics", rating: 4.5, image: "assets/img/product1.jpg" },
+        { id: 2, name: "Product 2", price: 150, category: "fashion", rating: 4.0, image: "assets/img/product2.jpg" },
+        { id: 3, name: "Product 3", price: 200, category: "home", rating: 3.5, image: "assets/img/product3.jpg" },
+        { id: 4, name: "Product 4", price: 250, category: "electronics", rating: 5.0, image: "assets/img/product4.jpg" },
+        { id: 5, name: "Product 5", price: 300, category: "fashion", rating: 4.5, image: "assets/img/product5.jpg" },
+        { id: 6, name: "Product 6", price: 350, category: "home", rating: 4.0, image: "assets/img/product6.jpg" },
+      ];
+
+      let currentPage = 1;
+      const itemsPerPage = 4;
+
+      function renderProducts() {
+        const productContainer = document.getElementById('product-container');
+        productContainer.innerHTML = "";
+
+        const filteredProducts = getFilteredProducts();
+        const paginatedProducts = paginate(filteredProducts, currentPage, itemsPerPage);
+
+        paginatedProducts.forEach(product => {
+          const productCard = document.createElement('div');
+          productCard.classList.add('col-md-3', 'mb-4');
+          productCard.innerHTML = `
+                      <div class="card h-100">
+                          <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                          <div class="card-body">
+                              <h5 class="card-title">${product.name}</h5>
+                              <p class="card-text">$${product.price}</p>
+                              <p class="card-text">Rating: ${product.rating}</p>
+                              <a href="cart.html" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                      </div>
+                  `;
+          productContainer.appendChild(productCard);
+        });
+
+        renderPagination(filteredProducts.length);
+      }
+
+      function renderPagination(totalItems) {
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const paginationContainer = document.querySelector('.pagination');
+        paginationContainer.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+          const paginationItem = document.createElement('li');
+          paginationItem.classList.add('page-item');
+          if (i === currentPage) {
+            paginationItem.classList.add('active');
+          }
+          paginationItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+          paginationItem.addEventListener('click', function (e) {
+            e.preventDefault();
+            currentPage = i;
+            renderProducts();
+          });
+          paginationContainer.appendChild(paginationItem);
+        }
+      }
+
+      function paginate(items, page, itemsPerPage) {
+        const start = (page - 1) * itemsPerPage;
+        return items.slice(start, start + itemsPerPage);
+      }
+
+      function getFilteredProducts() {
+        const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+        const selectedCategory = document.getElementById('category-filter').value;
+        const sortOption = document.getElementById('sort-filter').value;
+
+        let filteredProducts = products.filter(product => {
+          return (
+            product.name.toLowerCase().includes(searchQuery) &&
+            (selectedCategory === "" || product.category === selectedCategory)
+          );
+        });
+
+        if (sortOption === "price-low-high") {
+          filteredProducts.sort((a, b) => a.price - b.price);
+        } else if (sortOption === "price-high-low") {
+          filteredProducts.sort((a, b) => b.price - a.price);
+        } else if (sortOption === "rating") {
+          filteredProducts.sort((a, b) => b.rating - a.rating);
+        }
+
+        return filteredProducts;
+      }
+
+      document.getElementById('search-bar').addEventListener('input', renderProducts);
+      document.getElementById('category-filter').addEventListener('change', renderProducts);
+      document.getElementById('sort-filter').addEventListener('change', renderProducts);
+
+      renderProducts();
+    });
+  </script>
+
+</body>
+
+</html>

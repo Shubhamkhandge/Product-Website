@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        body {
+            background-image: url("assets/images/background/bg-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* .card {
+            margin: 10px 0px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px; font-weight: 500;"><strong
+                    class="text-dark">Tech</strong>Labs<b class="text-dark">.</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="ml-3">
+                    <a href="#" data-toggle="modal" data-target="#authModal" class="btn btn-outline-secondary">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="btn btn-outline-secondary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login Form -->
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <button type="button" class="btn btn-link" id="showRegisterForm">Create an account?</button>
+                    </form>
+
+                    <!-- Registration Form -->
+                    <form id="registerForm" style="display: none;">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                        <button type="button" class="btn btn-link" id="showLoginForm">Already an account</button>
+                    </form>
+
+                    <!-- Switch Form Buttons -->
+                    <div class="form-switch">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- Breadcrumb Navigation -->
+    <!-- <nav aria-label="breadcrumb" class="bg-light py-2">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shop</li>
+            </ol>
+        </div>
+    </nav> -->
+
+    <section id="hero-shop" class="d-flex align-items-center"
+        style="background: url('assets/img/shop-hero.jpg') center center / cover no-repeat;">
+        <div class="container text-center">
+            <h1 class="text-white">Our Shop</h1>
+            <p class="text-white">Discover our range of products</p>
+        </div>
+    </section>
+
+
+    <!-- Product Filters -->
+    <section id="product-filters" class="py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Categories</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#" class="category-filter"
+                                data-category="Mobiles and Accessories">Mobiles and Accessories</a></li>
+                        <li class="list-group-item"><a href="#" class="category-filter"
+                                data-category="Computers Accessories">Computers Accessories</a></li>
+                        <li class="list-group-item"><a href="#" class="category-filter"
+                                data-category="Gaming Accessories">Gaming Accessories</a></li>
+                    </ul>
+                    <h4 class="mt-4">Price Range</h4>
+                    <input type="range" class="form-control-range" id="priceRange" min="500" max="10000" step="1">
+                    <p class="mb-0">Price: $<span id="priceValue">500</span></p>
+                    <h4 class="mt-4">Sort By</h4>
+                    <select class="form-control" id="sortOptions">
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="best-selling">Best Selling</option>
+                        <option value="new-arrivals">New Arrivals</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+                <div class="col-md-9">
+                    <div class="row" id="productGrid">
+                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 bg-danger border product-card"
+                            data-category="Mobiles and Accessories" data-price="550" data-rating="4.5" data-new="true"
+                            data-bestseller="true">
+                            <div class="card h-100">
+                                <img src="assets/images/product/p1.jpg" class="card-img-top img-fluid border p-3"
+                                    alt="Product 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 1</h5>
+                                    <p class="card-text">₹.550</p>
+                                    <!-- <div class="mb-2">
+                                        <span class="badge badge-warning">4.5 <i class="fas fa-star"></i></span>
+                                    </div> -->
+                                    <div class="d-grid">
+                                        <a href="#" class="btn btn-primary w-100 my-1">Add to Cart</a>
+                                        <a href="#" class="btn btn-secondary w-100 my-1">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 bg-danger border product-card"
+                            data-category="Mobiles and Accessories" data-price="200" data-rating="4.8" data-new="true"
+                            data-bestseller="true">
+                            <div class="card h-100">
+                                <img src="assets/images/product/p2.jpg" class="card-img-top img-fluid border p-3"
+                                    alt="Product 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 2</h5>
+                                    <p class="card-text">₹.200</p>
+                                    <!-- <div class="mb-2">
+                                        <span class="badge badge-warning">4.5 <i class="fas fa-star"></i></span>
+                                    </div> -->
+                                    <div class="d-grid">
+                                        <a href="#" class="btn btn-primary w-100 my-1">Add to Cart</a>
+                                        <a href="#" class="btn btn-secondary w-100 my-1">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat for other products with appropriate data attributes -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Footer -->
+    <footer class="p-4 bg-light text-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-warning text-decoration-none" href="index.html">
+                        <h5 style="font-size: 30px; font-weight: 500;"><strong class="text-dark">Tech</strong>Labs<b
+                                class="text-dark">.</b></h5>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>Designed and built with all the love in the world by the TechLabs. team with the help
+                                of our contributors.</p>
+                        </li>
+                        <li>
+                            <p>Code licensed MIT, docs CC BY 3.0.</p>
+                        </li>
+                        <li>
+                            <p>Analytics by Shubham Khandge.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about-us.html" class="text-dark">About Us</a></li>
+                        <li><a href="shop.html" class="text-dark">Shop</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact-us.html" class="text-dark">Email</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Phone</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-3">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center col-md-12 py-2" style="font-size: 20px;"><b>&copy;</b>2024
+                        <strong>Tech</strong><b class="text-warning">Labs</b><b>.</b> All rights reserved.
+                    </p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 12,
+                autoplay: true,
+                nav: true,
+                rewindNav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        // nav: true
+                    },
+                    600: {
+                        items: 3,
+                        // nav: true
+                    },
+                    1000: {
+                        items: 4,
+                        // nav: true,
+                        // loop: true
+                    }
+                }
+            })
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const authModalLabel = document.getElementById('authModalLabel');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const showLoginForm = document.getElementById('showLoginForm');
+            const showRegisterForm = document.getElementById('showRegisterForm');
+
+            showLoginForm.addEventListener('click', function () {
+                authModalLabel.textContent = 'Login';
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            });
+
+            showRegisterForm.addEventListener('click', function () {
+                authModalLabel.textContent = 'Register';
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const productCards = document.querySelectorAll('.product-card');
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            const priceRange = document.getElementById('priceRange');
+            const sortOptions = document.getElementById('sortOptions');
+
+            // Filter by Category
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', event => {
+                    event.preventDefault();
+                    const category = filter.getAttribute('data-category');
+                    filterProducts(category, priceRange.value, sortOptions.value);
+                });
+            });
+
+            priceRange.addEventListener('input', function () {
+                priceValue.textContent = priceRange.value;
+                filterProducts();
+            });
+
+            // Filter by Price Range
+            priceRange.addEventListener('input', () => {
+                const category = document.querySelector('.category-filter.active')?.getAttribute('data-category') || 'all';
+                filterProducts(category, priceRange.value, sortOptions.value);
+            });
+
+            // Sort Products
+            sortOptions.addEventListener('change', () => {
+                const category = document.querySelector('.category-filter.active')?.getAttribute('data-category') || 'all';
+                filterProducts(category, priceRange.value, sortOptions.value);
+            });
+
+            function filterProducts(category, maxPrice, sortOption) {
+                let filteredProducts = Array.from(productCards).filter(card => {
+                    const productCategory = card.getAttribute('data-category');
+                    const productPrice = parseFloat(card.getAttribute('data-price'));
+                    return (category === 'all' || productCategory === category) && productPrice <= maxPrice;
+                });
+
+                sortProducts(filteredProducts, sortOption);
+
+                document.getElementById('productGrid').innerHTML = '';
+                filteredProducts.forEach(product => document.getElementById('productGrid').appendChild(product));
+            }
+
+            function sortProducts(products, sortOption) {
+                switch (sortOption) {
+                    case 'low-high':
+                        products.sort((a, b) => parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price')));
+                        break;
+                    case 'high-low':
+                        products.sort((a, b) => parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price')));
+                        break;
+                    case 'best-selling':
+                        products.sort((a, b) => b.getAttribute('data-bestseller') === 'true' ? -1 : 1);
+                        break;
+                    case 'new-arrivals':
+                        products.sort((a, b) => b.getAttribute('data-new') === 'true' ? -1 : 1);
+                        break;
+                    case 'rating':
+                        products.sort((a, b) => parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating')));
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            // Initialize filters with default values
+            filterProducts('all', priceRange.value, sortOptions.value);
+        });
+    </script>
+
+
+
+</body>
+
+</html>

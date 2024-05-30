@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        body {
+            background-image: url("assets/images/background/bg-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* .card {
+            margin: 10px 0px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px; font-weight: 500;"><strong
+                    class="text-dark">Tech</strong>Labs<b class="text-dark">.</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="ml-3">
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="hero-contact" class="d-flex align-items-center"
+        style="background: url('assets/images/background/background1.jpg') center center / cover no-repeat; height: 450px;">
+        <div class="container text-center">
+            <h1 class="text-white">Contact Us</h1>
+            <p class="text-white">We're here to help and answer any question you might have.</p>
+        </div>
+    </section>
+    <hr>
+    <!-- Contact Information -->
+    <section id="contact-info" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <h4>Address</h4>
+                    <p>J-33, Hingane Home Colony, Karvenagar</p>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <h4>Phone</h4>
+                    <p>+91 7972759973/ 9527932801</p>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <h4>Email</h4>
+                    <p>techlabs@gmail.com</p>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <h4>Working Hours</h4>
+                    <p>Mon - Fri: 9 AM - 5 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Contact Form -->
+    <!-- <section id="contact-form" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col col-xl-8 col-lg-8 col-md-8 col-sm-12 p-md-5">
+                    <form action="mailto:khandgeshubham404@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Name :</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email Address :</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject :</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message :</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="Send">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact-form" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col col-xl-8 col-lg-8 col-md-8 col-sm-12 p-md-5">
+                    <form action="mailto:khandgeshubham404@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Name :</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email Address :</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject :</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message :</label>
+                            <textarea class="form-control" id="message" name="message" rows="5"
+                                placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="Send">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Our Location</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7567.792675178145!2d73.80529169117277!3d18.48835415553111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfdba7867e77%3A0x624a317099e4e8b!2sHingane%20Home%20Colony%2C%20Karve%20Nagar%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716658551755!5m2!1sen!2sin"
+                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <section id="social-media" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Follow Us</h2>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn btn-info mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="btn btn-danger mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="btn btn-primary mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="p-4 bg-light text-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-warning text-decoration-none" href="index.html">
+                        <h5 style="font-size: 30px; font-weight: 500;"><strong class="text-dark">Tech</strong>Labs<b
+                                class="text-dark">.</b></h5>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>Designed and built with all the love in the world by the TechLabs. team with the help
+                                of our contributors.</p>
+                        </li>
+                        <li>
+                            <p>Code licensed MIT, docs CC BY 3.0.</p>
+                        </li>
+                        <li>
+                            <p>Analytics by Shubham Khandge.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about-us.html" class="text-dark">About Us</a></li>
+                        <li><a href="shop.html" class="text-dark">Shop</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact-us.html" class="text-dark">Email</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Phone</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-3">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center col-md-12 py-2" style="font-size: 20px;"><b>&copy;</b>2024
+                        <strong>Tech</strong><b class="text-warning">Labs</b><b>.</b> All rights reserved.
+                    </p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 12,
+                autoplay: true,
+                nav: true,
+                rewindNav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        // nav: true
+                    },
+                    600: {
+                        items: 3,
+                        // nav: true
+                    },
+                    1000: {
+                        items: 4,
+                        // nav: true,
+                        // loop: true
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

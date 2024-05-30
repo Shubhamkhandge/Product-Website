@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        body {
+            background-image: url("assets/images/background/bg-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* .card {
+            margin: 10px 0px;
+        } */
+        .form-switch {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .form-switch button {
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px; font-weight: 500;"><strong
+                    class="text-dark">Tech</strong>Labs<b class="text-dark">.</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="ml-3">
+                    <a href="#" data-toggle="modal" data-target="#authModal" class="btn btn-outline-secondary">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="btn btn-outline-secondary">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login Form -->
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 mb-3">Login</button>
+                        <div class="mb-3 text-right">
+                            <a href="#" class="text-danger" id="showForgotPasswordForm">Forgot password?</a>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <h6>
+                                Don't have an account? Keep
+                                <a href="#" class="text-primary" id="showRegisterForm">SignUp</a>
+                            </h6>
+                        </div>
+                    </form>
+
+                    <!-- Registration Form -->
+                    <form id="registerForm" style="display: none;">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100 mb-3">Register</button>
+                        <div class="mb-3 text-center">
+                            <h6>Already have an account? Keep <a href="#" class="text-primary" id="showLoginForm">Sign
+                                    In</a></h6>
+                        </div>
+                    </form>
+
+                    <!-- Forgot Password Form -->
+                    <form id="forgotPasswordForm" style="display: none;">
+                        <div class="mb-3">
+                            <label for="forgotEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="forgotEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100 mb-3">Reset Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="assets/images/video/v-3.gif" class="d-block w-100" alt="...">
+                <!-- <img src="assets/img/hero2.jpg" class="d-block w-100" alt="..."> -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>New Arrivals</h5>
+                    <p>Check out our latest collection</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <video class="d-block w-100" controls autoplay>
+                    <source src="assets/images/video/v-2.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Big Sale</h5>
+                    <p>Up to 50% off on selected items</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <video class="d-block w-100" controls autoplay>
+                    <source src="assets/images/video/v-1.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Big Sale</h5>
+                    <p>Up to 50% off on selected items</p>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#hero" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
+
+    <!-- Feature Sections -->
+    <section id="categories" class="py-5">
+        <div class="container py-md-2">
+            <h2 class="text-center text-uppercase" style="color: black; font-weight: 600;">Shop by Category</h2>
+            <hr style="width: 50%; background: #000; height: 1px;">
+            <div class="row p-sm-3">
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/background/background1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Category 1</h5>
+                            <p class="card-text">Explore our range of Category 1 products.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/background/background1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Category 2</h5>
+                            <p class="card-text">Explore our range of Category 2 products.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/background/background1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Category 2</h5>
+                            <p class="card-text">Explore our range of Category 2 products.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/background/background1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Category 3</h5>
+                            <p class="card-text">Explore our range of Category 3 products.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-products" class="py-5 bg-light">
+        <div class="container py-md-2">
+            <h2 class="text-center text-uppercase" style="color: black; font-weight: 600;">Featured Products</h2>
+            <hr style="width: 50%; background: #000; height: 1px;">
+            <div class="row p-sm-3">
+                <!-- Repeat product card for each featured product -->
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">HP Laptop 15s</h5>
+                            <p class="card-text"><b>₹37,659</b></p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                            <details>
+                                <summary class="text-dark">Read More...</summary>
+                                <p>HP Laptop 15s, 12th Gen Intel Core i3, 15.6-inch (39.6 cm), 8GB DDR4, 512GB SSD,
+                                    Thin & Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq5007TU / FQ5327TU
+                                    Brand: HP
+                                    4.0 4.0 out of 5 stars 893 ratings | Search this page
+                                    1K+ bought in past month
+                                    ₹37,659.00 with 33 percent savings-33% ₹37,659
+                                    M.R.P.: ₹56,261.00M.R.P.: ₹56,261</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">HP Laptop 15s</h5>
+                            <p class="card-text"><b>₹37,659</b></p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                            <details>
+                                <summary class="text-dark">Read More...</summary>
+                                <p>HP Laptop 15s, 12th Gen Intel Core i3, 15.6-inch (39.6 cm), 8GB DDR4, 512GB SSD,
+                                    Thin & Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq5007TU / FQ5327TU
+                                    Brand: HP
+                                    4.0 4.0 out of 5 stars 893 ratings | Search this page
+                                    1K+ bought in past month
+                                    ₹37,659.00 with 33 percent savings-33% ₹37,659
+                                    M.R.P.: ₹56,261.00M.R.P.: ₹56,261</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">HP Laptop 15s</h5>
+                            <p class="card-text"><b>₹37,659</b></p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                            <details>
+                                <summary class="text-dark">Read More...</summary>
+                                <p>HP Laptop 15s, 12th Gen Intel Core i3, 15.6-inch (39.6 cm), 8GB DDR4, 512GB SSD,
+                                    Thin & Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq5007TU / FQ5327TU
+                                    Brand: HP
+                                    4.0 4.0 out of 5 stars 893 ratings | Search this page
+                                    1K+ bought in past month
+                                    ₹37,659.00 with 33 percent savings-33% ₹37,659
+                                    M.R.P.: ₹56,261.00M.R.P.: ₹56,261</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-1.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">HP Laptop 15s</h5>
+                            <p class="card-text"><b>₹37,659</b></p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                            <details>
+                                <summary class="text-dark">Read More...</summary>
+                                <p>HP Laptop 15s, 12th Gen Intel Core i3, 15.6-inch (39.6 cm), 8GB DDR4, 512GB SSD,
+                                    Thin & Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq5007TU / FQ5327TU
+                                    Brand: HP
+                                    4.0 4.0 out of 5 stars 893 ratings | Search this page
+                                    1K+ bought in past month
+                                    ₹37,659.00 with 33 percent savings-33% ₹37,659
+                                    M.R.P.: ₹56,261.00M.R.P.: ₹56,261</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <center>
+        <section id="new-arrivals" class="py-5">
+            <div class="container py-md-2 m-auto">
+                <h2 class="text-center text-uppercase" style="color: black; font-weight: 600;">New Arrivals</h2>
+                <hr style="width: 50%; background: #000; height: 1px;">
+                <div class="row p-sm-3 owl-carousel owl-theme">
+                    <!-- Repeat product card for each new arrival -->
+                    <div class="item">
+                        <div class="card">
+                            <img src="assets/images/product/p-2.webp" class="card-img-top img-fluid p-2" alt="...">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">ASUS ROG Strix G16 </h5>
+                                <p class="card-text">₹1,99,990</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="assets/images/product/p-2.webp" class="card-img-top img-fluid p-2" alt="...">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">ASUS ROG Strix G16 </h5>
+                                <p class="card-text">₹1,99,990</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="assets/images/product/p-2.webp" class="card-img-top img-fluid p-2" alt="...">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">ASUS ROG Strix G16 </h5>
+                                <p class="card-text">₹1,99,990</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="assets/images/product/p-2.webp" class="card-img-top img-fluid p-2" alt="...">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">ASUS ROG Strix G16 </h5>
+                                <p class="card-text">₹1,99,990</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="assets/images/product/p-2.webp" class="card-img-top img-fluid p-2" alt="...">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">ASUS ROG Strix G16 </h5>
+                                <p class="card-text">₹1,99,990</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="assets/images/product/p-2.webp" class="card-img-top img-fluid p-2" alt="...">
+                            <div class="card-body text-left">
+                                <h5 class="card-title">ASUS ROG Strix G16 </h5>
+                                <p class="card-text">₹1,99,990</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3">
+                        <div class="card">
+                            <img src="assets/images/p-2.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">$39.99</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Add more product cards as needed -->
+                </div>
+            </div>
+        </section>
+    </center>
+
+    <section id="best-sellers" class="py-5 bg-light">
+        <div class="container py-md-2">
+            <h2 class="text-center text-uppercase" style="color: black; font-weight: 600;">Best Sellers</h2>
+            <hr style="width: 50%; background: #000; height: 1px;">
+            <div class="row p-sm-3">
+                <!-- Repeat product card for each best seller -->
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-3.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body text-left">
+                            <h5 class="card-title">Dell 15 Laptop</h5>
+                            <p class="card-text">₹46,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-3.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body text-left">
+                            <h5 class="card-title">Dell 15 Laptop</h5>
+                            <p class="card-text">₹46,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-3.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body text-left">
+                            <h5 class="card-title">Dell 15 Laptop</h5>
+                            <p class="card-text">₹46,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-3.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body text-left">
+                            <h5 class="card-title">Dell 15 Laptop</h5>
+                            <p class="card-text">₹46,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="special-offers" class="py-5">
+        <div class="container py-md-2">
+            <h2 class="text-center text-uppercase" style="color: black; font-weight: 600;">Special Offers</h2>
+            <hr style="width: 50%; background: #000; height: 1px;">
+            <div class="row p-sm-3">
+                <!-- Repeat product card for each special offer -->
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-4.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Acer Nitro V Gaming Laptop</h5>
+                            <p class="card-text">₹73,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-4.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Acer Nitro V Gaming Laptop</h5>
+                            <p class="card-text">₹73,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-4.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Acer Nitro V Gaming Laptop</h5>
+                            <p class="card-text">₹73,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 my-2">
+                    <div class="card">
+                        <img src="assets/images/product/p-4.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Acer Nitro V Gaming Laptop</h5>
+                            <p class="card-text">₹73,990</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <center>
+        <section id="testimonials" class="py-5 bg-light">
+            <div class="container py-md-2">
+                <h2 class="text-center text-uppercase" style="color: black; font-weight: 600;">What Our Customers Say
+                </h2>
+                <hr style="width: 50%; background: #000; height: 1px;">
+                <div class="row p-sm-3 owl-carousel owl-theme">
+                    <!-- Repeat testimonial block for each testimonial -->
+                    <div class="item">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Great products and excellent service!"</p>
+                                <p class="card-text"><strong>- Customer Name</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Great products and excellent service!"</p>
+                                <p class="card-text"><strong>- Customer Name</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Great products and excellent service!"</p>
+                                <p class="card-text"><strong>- Customer Name</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Great products and excellent service!"</p>
+                                <p class="card-text"><strong>- Customer Name</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Great products and excellent service!"</p>
+                                <p class="card-text"><strong>- Customer Name</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more testimonial blocks as needed -->
+                </div>
+            </div>
+        </section>
+    </center>
+
+    <section id="brand-mission">
+        <!-- Brand Mission Statement -->
+        <!-- <div class="container-fluid mt-5">
+            <div class="jumbotron">
+                <h2 class="display-4">Brand Mission Statement</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut
+                    labore et dolore magna aliqua.</p>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section id="newsletter" class="py-5">
+        <div class="container py-md-2">
+            <h2 class="text-center text-capitalize" style="color: black; font-weight: 600;">Stay Updated</h2>
+            <p class="text-center">Sign up for our newsletter to get the latest news and special offers.</p>
+            <!-- <form class="form-inline justify-content-center">
+                <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter your email">
+                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+            </form> -->
+            <div class="col-xl-6 col-lg-4 col-md-8 col-sm-12 input-group mb-3 m-auto">
+                <input type="text" class="form-control" placeholder="Enter your email" aria-label="email"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-primary mb-2" type="submit" id="button-addon2">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 bg-light text-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-warning text-decoration-none" href="index.html">
+                        <h5 style="font-size: 30px; font-weight: 500;"><strong class="text-dark">Tech</strong>Labs<b
+                                class="text-dark">.</b></h5>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>Designed and built with all the love in the world by the TechLabs. team with the help
+                                of our contributors.</p>
+                        </li>
+                        <li>
+                            <p>Code licensed MIT, docs CC BY 3.0.</p>
+                        </li>
+                        <li>
+                            <p>Analytics by Shubham Khandge.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about-us.html" class="text-dark">About Us</a></li>
+                        <li><a href="shop.html" class="text-dark">Shop</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact-us.html" class="text-dark">Email</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Phone</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-3">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center col-md-12 py-2" style="font-size: 20px;"><b>&copy;</b>2024
+                        <strong>Tech</strong><b class="text-warning">Labs</b><b>.</b> All rights reserved.
+                    </p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 12,
+                autoplay: true,
+                nav: true,
+                rewindNav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        // nav: true
+                    },
+                    600: {
+                        items: 3,
+                        // nav: true
+                    },
+                    1000: {
+                        items: 4,
+                        // nav: true,
+                        // loop: true
+                    }
+                }
+            })
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const authModalLabel = document.getElementById('authModalLabel');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+            const showLoginForm = document.getElementById('showLoginForm');
+            const showRegisterForm = document.getElementById('showRegisterForm');
+            const showForgotPasswordForm = document.getElementById('showForgotPasswordForm');
+
+            showLoginForm.addEventListener('click', function () {
+                authModalLabel.textContent = 'Login';
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                forgotPasswordForm.style.display = 'none';
+            });
+
+            showRegisterForm.addEventListener('click', function () {
+                authModalLabel.textContent = 'Register';
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+                forgotPasswordForm.style.display = 'none';
+            });
+
+            showForgotPasswordForm.addEventListener('click', function () {
+                authModalLabel.textContent = 'Forgot Password';
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'none';
+                forgotPasswordForm.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

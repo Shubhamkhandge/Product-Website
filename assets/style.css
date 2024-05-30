@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* padding-top: 56px; */
+}
+
+.special-offer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.special-offer-card img {
+    transition: transform 0.3s ease;
+}
+
+.special-offer-card:hover img {
+    transform: scale(1.1);
+}
+
+.special-offer-card .card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: bottom 0.3s ease;
+}
+
+.special-offer-card:hover .card-body {
+    bottom: -50px;
+}
+
+.special-offer-card .card-body h5,
+.special-offer-card .card-body p {
+    margin: 0;
+}
+
+.special-offer-card .btn {
+    border-radius: 0;
+}
+
+

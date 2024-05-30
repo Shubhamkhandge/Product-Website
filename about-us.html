@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        body {
+            background-image: url("assets/images/background/bg-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* .card {
+            margin: 10px 0px;
+        } */
+        .box img {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px; font-weight: 500;"><strong
+                    class="text-dark">Tech</strong>Labs<b class="text-dark">.</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="ml-3">
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero-about" class="d-flex align-items-center"
+        style="background: url('assets/images/background/background1.jpg') center center / cover no-repeat; height: 450px;">
+        <div class="container text-center">
+            <h1 class="text-dark">About Us</h1>
+            <p class="text-dark">Learn more about our story, mission, and team.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="our-story" class="py-5">
+        <div class="container text-white">
+            <h2 class="text-center">Our Story</h2>
+            <p class="text-center">Founded in 2020, Your Company has grown from a small startup to a leading provider of
+                quality products. Our journey began with a simple mission: to deliver exceptional value and customer
+                satisfaction.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Mission</h3>
+                    <p>To provide the best products and services that enrich our customers' lives and contribute to a
+                        better world.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Vision</h3>
+                    <p>To be the most trusted and innovative company in our industry, known for our commitment to
+                        quality and customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Meet the Team -->
+    <section class="bg-light py-3 py-md-5 py-xl-8">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="mb-4 display-5 text-center">Meet Our Leadership</h2>
+                    <p class="text-secondary mb-5 text-center lead fs-4">
+                        Leadership is the ability of an individual or a
+                        group of people to influence and guide followers or members of an organization, society or team.
+                    </p>
+                    <!-- <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"> -->
+                </div>
+            </div>
+        </div>
+        <center>
+            <div class="container overflow-hidden px-5 py-4">
+                <div class="row gy-4 gx-xxl-5">
+                    <!-- First Box -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-2">
+                        <div class="box d-flex flex-column flex-md-row p-4 bg-white">
+                            <div class="col-md-4">
+                                <img class="img-fluid" loading="lazy" src="assets/images/Team/sujit.jpeg"
+                                    alt="Sujit Ranpise">
+                            </div>
+                            <div class="col-md-8 text-left mt-3 mt-md-0">
+                                <h4 class="mb-1">Sujit Ranpise</h4>
+                                <p class="text-secondary text-muted mb-2">CEO of <strong>TechLabs.</strong></p>
+                                <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem
+                                    ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Temporibus,
+                                    quaerat qui? Debitis placeat repellat ut in molestiae commodi, vel ipsa cumque iusto
+                                    recusandae delectus sapiente illo mollitia minima earum, saepe blanditiis! Autem nam
+                                    fugiat a possimus corrupti accusamus voluptatibus quaerat distinctio temporibus
+                                    earum voluptas voluptates dolorum, atque illo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Box -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-2">
+                        <div class="box d-flex flex-column flex-md-row p-4 bg-white">
+                            <div class="col-md-8 text-left order-md-1 order-2 mt-3 mt-md-0">
+                                <h4 class="mb-1">Shubham Khandge</h4>
+                                <p class="text-secondary text-muted mb-0">Founder of <strong>TechLabs.</strong></p>
+                                <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem
+                                    ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Temporibus,
+                                    quaerat qui? Debitis placeat repellat ut in molestiae commodi, vel ipsa cumque iusto
+                                    recusandae delectus sapiente illo mollitia minima earum, saepe blanditiis! Autem nam
+                                    fugiat a possimus corrupti accusamus voluptatibus quaerat distinctio temporibus
+                                    earum voluptas voluptates dolorum, atque illo.
+                                </p>
+                            </div>
+                            <div class="col-md-4 order-md-2 order-1">
+                                <img class="img-fluid" loading="lazy" src="assets/images/Team/Profile.jpg"
+                                    alt="Shubham Khandge">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third Box -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-2">
+                        <div class="box d-flex flex-column flex-md-row p-4 bg-white">
+                            <div class="col-md-4">
+                                <img class="img-fluid" loading="lazy" src="assets/images/Team/akshay.jpg"
+                                    alt="Akshay Kasar">
+                            </div>
+                            <div class="col-md-8 text-left mt-3 mt-md-0">
+                                <h4 class="mb-1">Akshay Kasar</h4>
+                                <p class="text-secondary text-muted mb-2">CO Founder of <strong>TechLabs.</strong></p>
+                                <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem
+                                    ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Temporibus,
+                                    quaerat qui? Debitis placeat repellat ut in molestiae commodi, vel ipsa cumque iusto
+                                    recusandae delectus sapiente illo mollitia minima earum, saepe blanditiis! Autem nam
+                                    fugiat a possimus corrupti accusamus voluptatibus quaerat distinctio temporibus
+                                    earum voluptas voluptates dolorum, atque illo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+    </section>
+
+
+    <!-- Meet the Team -->
+    <!-- Team 1 - Bootstrap Brain Component -->
+    <section class="bg-light py-3 py-md-5 py-xl-8">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="mb-4 display-5 text-center">Our Team</h2>
+                    <p class="text-secondary mb-5 text-center lead fs-4">We are a group of innovative, experienced, and
+                        proficient teams. You will love to collaborate with us.</p>
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                </div>
+            </div>
+        </div>
+        <center>
+            <div class="container overflow-hidden">
+                <div class="row gy-4 gy-lg-0 gx-xxl-5 owl-carousel owl-theme">
+                    <!-- <div class="col-12 col-md-6 col-lg-3"> -->
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/sujit.jpeg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Sujit Ranpise</h4>
+                                        <p class="text-secondary mb-0">CEO of <strong>TechLabs.</strong></p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/Profile.jpg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Shubham Khandge</h4>
+                                        <p class="text-secondary mb-0">Full Stack Web Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/vinayak.jpeg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Vinayak Pawar</h4>
+                                        <p class="text-secondary mb-0">React JS Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/akshay.jpg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Akshay Kasar</h4>
+                                        <p class="text-secondary mb-0">DevOps Engineer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/nk-1.jpeg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Nikhil Badgujar</h4>
+                                        <p class="text-secondary mb-0">.NET Cloud Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/sami.jpeg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Samiksha Nawale</h4>
+                                        <p class="text-secondary mb-0">AI/ML Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/vidya.jpeg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Vidya Wakchaure</h4>
+                                        <p class="text-secondary mb-0">Full Stack Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/pranali.JPG" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Pranali Lande</h4>
+                                        <p class="text-secondary mb-0">Automation Testing</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/ajay.png" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Ajay Wahurwagh</h4>
+                                        <p class="text-secondary mb-0">Python Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/sagar.png" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Sagar Gundale</h4>
+                                        <p class="text-secondary mb-0">Software Tester</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="assets/images/Team/amey.jpeg" alt="">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Ameya Kulkarni</h4>
+                                        <p class="text-secondary mb-0">Manual/Automation Tester</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </center>
+    </section>
+
+    <!-- Our Values -->
+    <section id="our-values" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Our Values</h2>
+            <div class="row">
+                <div class="col-md-4 text-md-center text-sm-left">
+                    <h3>Integrity</h3>
+                    <p>We uphold the highest standards of integrity in all our actions.</p>
+                </div>
+                <div class="col-md-4 text-md-center text-sm-left">
+                    <h3>Customer Focus</h3>
+                    <p>Our customers are at the heart of everything we do.</p>
+                </div>
+                <div class="col-md-4 text-md-center text-sm-left">
+                    <h3>Innovation</h3>
+                    <p>We constantly seek new and better ways to serve our customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards and Recognition -->
+    <section id="awards" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Awards and Recognition</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Best Startup Award 2021</h4>
+                    <p>Recognized for our innovative approach and rapid growth in the industry.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Customer Choice Award 2022</h4>
+                    <p>Awarded for our outstanding customer service and satisfaction rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Exceptional quality and fantastic customer service!"</p>
+                        <footer class="blockquote-footer">Alice Brown</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4 text-center">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"I love the variety of products available."</p>
+                        <footer class="blockquote-footer">Michael Lee</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4 text-center">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"Fast shipping and great prices!"</p>
+                        <footer class="blockquote-footer">Sarah Wilson</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have any questions or want to learn more about us? Reach out to us anytime!</p>
+            <a href="contact-us.html" class="btn btn-light">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 bg-light text-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-warning text-decoration-none" href="index.html">
+                        <h5 style="font-size: 30px; font-weight: 500;"><strong class="text-dark">Tech</strong>Labs<b
+                                class="text-dark">.</b></h5>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>Designed and built with all the love in the world by the TechLabs. team with the help
+                                of our contributors.</p>
+                        </li>
+                        <li>
+                            <p>Code licensed MIT, docs CC BY 3.0.</p>
+                        </li>
+                        <li>
+                            <p>Analytics by Shubham Khandge.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about-us.html" class="text-dark">About Us</a></li>
+                        <li><a href="shop.html" class="text-dark">Shop</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact-us.html" class="text-dark">Email</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Phone</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-3">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center col-md-12 py-2" style="font-size: 20px;"><b>&copy;</b>2024
+                        <strong>Tech</strong><b class="text-warning">Labs</b><b>.</b> All rights reserved.
+                    </p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 12,
+                autoplay: true,
+                nav: true,
+                rewindNav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        // nav: true
+                    },
+                    600: {
+                        items: 3,
+                        // nav: true
+                    },
+                    1000: {
+                        items: 4,
+                        // nav: true,
+                        // loop: true
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
