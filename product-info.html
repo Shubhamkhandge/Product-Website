@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        body {
+            /* background-image: url("assets/images/background/bg-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; */
+            background-color: #fff;
+        }
+
+        .card-title a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            color: red;
+        }
+
+        .product-gallery {
+            display: flex;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .product-main-image {
+            width: 100%;
+        }
+
+        .thumbnail {
+            max-width: 100px;
+            margin: 0 5px;
+        }
+
+        .thumbnail img {
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .thumbnail img.active {
+            border-color: #007bff;
+        }
+
+        .product-card {
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .thumbnail img.active {
+            border: 2px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px; font-weight: 500;"><strong
+                    class="text-dark">Tech</strong>Labs<b class="text-dark">.</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="ml-3">
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-dark">
+        <div class="container bg-dark">
+            <ol class="breadcrumb bg-dark">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                <li class="breadcrumb-item"><a href="shop.html" class="text-decoration-none text-white">Shop</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Product Page</li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5 px-2">
+        <div class="row px-5 mx-md-5">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="product-main-image mb-4 border">
+                    <img src="assets/images/product/p-4.jpg" id="mainImage" class="img-fluid" alt="Main Product Image">
+                </div>
+                <div class="product-gallery d-flex">
+                    <div class="thumbnail me-2">
+                        <img src="assets/images/product/p-4.jpg" data-large-src="assets/images/product/p-4.jpg"
+                            class="img-fluid active" alt="Product Thumbnail 1">
+                    </div>
+                    <div class="thumbnail me-2">
+                        <img src="assets/images/product/p41.jpg" data-large-src="assets/images/product/p41.jpg"
+                            class="img-fluid" alt="Product Thumbnail 2">
+                    </div>
+                    <div class="thumbnail me-2">
+                        <img src="assets/images/product/p42.jpg" data-large-src="assets/images/product/p42.jpg"
+                            class="img-fluid" alt="Product Thumbnail 3">
+                    </div>
+                    <div class="thumbnail me-2">
+                        <img src="assets/images/product/p43.jpg" data-large-src="assets/images/product/p43.jpg"
+                            class="img-fluid" alt="Product Thumbnail 4">
+                    </div>
+                    <div class="thumbnail me-2">
+                        <img src="assets/images/product/p44.jpg" data-large-src="assets/images/product/p44.jpg"
+                            class="img-fluid" alt="Product Thumbnail 5">
+                    </div>
+                    <div class="thumbnail me-2">
+                        <img src="assets/images/product/p45.jpg" data-large-src="assets/images/product/p45.jpg"
+                            class="img-fluid" alt="Product Thumbnail 6">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h4 class="text-justify">Acer Nitro V Gaming Laptop 13th Gen Intel Core i5-13420H with RTX 4050 Graphics
+                    6GB VRAM, 144Hz
+                    Display (16GB DDR5/512GB SSD/Windows 11 Home/Wi-Fi 6),15.6"(39.6cms) FHD ANV15-51</h4>
+                <p class="text-muted">SKU: 12345</p>
+                <div class="ratings mb-3">
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span>4.0</span> | <a href="#">Read all reviews</a>
+                </div>
+                <h2><b>₹.</b> 62,990</h2>
+                <p>Short description of the product goes here. It provides a brief overview of the key features and
+                    benefits.</p>
+                <div class="mb-4">
+                    <button class="btn btn-primary btn-lg rounded-0"><i class="fas fa-cart-plus"></i> Add to
+                        Cart</button>
+                    <button class="btn btn-success btn-lg rounded-0"><i class="fa fa-shopping-basket"
+                            aria-hidden="true"></i> Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active rounded-0" id="description-tab" data-bs-toggle="tab"
+                            data-bs-target="#description" type="button" role="tab" aria-controls="description"
+                            aria-selected="true">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-0" id="specifications-tab" data-bs-toggle="tab"
+                            data-bs-target="#specifications" type="button" role="tab" aria-controls="specifications"
+                            aria-selected="false">Specifications</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-0" id="reviews-tab" data-bs-toggle="tab"
+                            data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews"
+                            aria-selected="false">Reviews</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-3" id="productTabContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel"
+                        aria-labelledby="description-tab">
+                        <p>
+                            Full description of the product goes here. It provides detailed information about the
+                            product, its features, and benefits.
+                        </p>
+                        <div class="container">
+                            <div class="row mt-5">
+                                <div class="col-12 mb-3">
+                                    <img src="assets/images/product/p4banner.jpg" class="img-fluid w-100"
+                                        alt="Product Image">
+                                </div>
+                                <div class="col-12">
+                                    <h5><b>Acer Nitro V</b></h5>
+                                    <div class="row">
+                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                            <div class="card border-0">
+                                                <img src="assets/images/product/p4b.jpg"
+                                                    class="card-img-top img-fluid rounded-0" alt="Related Product 1">
+                                                <div class="card-body px-0">
+                                                    <h6 class="card-title">
+                                                        Beyond Performance
+                                                    </h6>
+                                                    <p class="card-text">
+                                                        Empower your gaming and creativity with the
+                                                        Nitro V 15, combining a 13th Gen Intel Core i5 processor and
+                                                        with the option of 20/30/40 Series NVIDIA GeForce RTX GPU
+                                                        Laptops. These powerhouses support up to Gen4 top-speed M.2 PCIe
+                                                        NVMe SSDs and up to 32GB of DDR5 RAM, equipping you with light
+                                                        speed capabilities whether you're orchestrating a climactic
+                                                        battle or crafting your next visual masterpiece.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                            <div class="card border-0">
+                                                <img src="assets/images/product/p4b1.jpg"
+                                                    class="card-img-to img-fluid rounded-0" alt="Related Product 2">
+                                                <div class="card-body px-0">
+                                                    <h6 class="card-title">
+                                                        An Era of Visual Dominance
+                                                    </h6>
+                                                    <p class="card-text">
+                                                        Welcome to a new era of visual dominance. See your digital
+                                                        conquests unfold in vibrant Full HD on a 15.6" screen, perfectly
+                                                        timed at a lightning-fast 144Hz refresh rate and a wide 16:9
+                                                        aspect ratio providing 82.64% screen-to-body ratio. It's like
+                                                        having a portal to the gaming universe right on your lap.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                            <div class="card border-0">
+                                                <img src="assets/images/product/p4b2.jpg"
+                                                    class="card-img-to img-fluid rounded-0" alt="Related Product 3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title px-0">
+                                                        <h6 class="card-title">
+                                                            Keep Your Cool
+                                                        </h6>
+                                                        <p class="card-text">
+                                                            Keep your cool amidst the most fierce gaming galaxies,
+                                                            thanks to Nitro V 15's innovative dual fans and effective
+                                                            exhaust system. As you navigate interstellar conflicts, your
+                                                            laptop stays serene as deep space. Its gradient design
+                                                            mirrors the neon hues of a futuristic cityscape, immersing
+                                                            you deeper into your gaming universe.
+                                                        </p>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5><b>Acer Nitro V</b></h5>
+                                    <div class="row">
+                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                            <div class="card border-0">
+                                                <img src="assets/images/product/p4b3.jpg"
+                                                    class="card-img-to img-fluid rounded-0" alt="Related Product 4">
+                                                <div class="card-body px-0">
+                                                    <h6 class="card-title">
+                                                        Stay Connected
+                                                    </h6>
+                                                    <p class="card-text">
+                                                        Your gaming sanctuary is wherever you are. On the couch? Settle
+                                                        in with fast and stable Wi-Fi 6. Gaming cafe? Get an edge online
+                                                        with Gigabit Ethernet. No matter your location, Nitro V 15
+                                                        ensures you're always in the driver's seat. With the powerful
+                                                        Thunderbolt 4 port, you have the trifecta of power charging and
+                                                        data transfer with bidirectional movement and video display in
+                                                        one interface.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                            <div class="card border-0">
+                                                <img src="assets/images/product/p4b4.jpg"
+                                                    class="card-img-to img-fluid rounded-0" alt="Related Product 4">
+                                                <div class="card-body px-0">
+                                                    <h6 class="card-title">
+                                                        No Limits with NitroSense
+                                                    </h6>
+                                                    <p class="card-text">
+                                                        Channel your inner gaming strategist with the NitroSense utility
+                                                        app. Fine-tune your gaming setup to match your style, be it
+                                                        adjusting fan speeds for those heated battles or customizing
+                                                        lighting for immersive exploration. The power is at your
+                                                        fingertips, transforming your laptop into a perfectly calibrated
+                                                        command center for every gaming mission.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-12 my-2">
+                                            <div class="card border-0">
+                                                <img src="assets/images/product/p4b5.jpg"
+                                                    class="card-img-to img-fluid rounded-0" alt="Related Product 4">
+                                                <div class="card-body px-0">
+                                                    <h6 class="card-title">
+                                                        Always Be Heard and Seen
+                                                    </h6>
+                                                    <p class="card-text">
+                                                        DTS X: Ultra Audio provides a sonic advantage in your space-age
+                                                        battles. Experience crystal clear communication with AI-powered
+                                                        Acer PurifiedView and PurifiedVoice noise reduction technology.
+                                                        You'll feel like you're in the command center of a spaceship,
+                                                        with pinpoint sound accuracy giving you the edge in your gaming
+                                                        skirmishes. DTS X: Ultra Audio provides a sonic advantage in
+                                                        your space age battles. Experience crystal clear communication
+                                                        with AI-powered Acer PurifiedView and PurifiedVoice noise
+                                                        reduction technology. You'll feel like you're in the command
+                                                        center of a spaceship, with pinpoint sound accuracy giving you
+                                                        the edge in your gaming skirmishes.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="specifications" role="tabpanel" aria-labelledby="specifications-tab">
+                        <ul class="list-unstyled">
+                            <li><b>Brand :</b> Acer</li>
+                            <li><b>Model Name :</b> ANV15-51</li>
+                            <li><b>Screen Size :</b> 15.6 Inches</li>
+                            <li><b>Colour :</b> Black</li>
+                            <li><b>Hard Disk :</b> Size 512 GB</li>
+                            <li><b>CPU Model :</b> Core i5</li>
+                            <li><b>RAM Memory :</b> Installed Size 16 GB</li>
+                            <li><b>Operating System :</b> Windows 11 Home</li>
+                            <li><b>Special Feature :</b> Backlit Keyboard</li>
+                            <li><b>Graphics Card Description :</b> Dedicated</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <h3>Customer Reviews</h3>
+                                <ul class="list-unstyled">
+                                    <li class="media mb-4">
+                                        <img src="assets/images/Team/Profile.jpg" class="mr-3 rounded-circle"
+                                            alt="Shubham Khandge" width="64" height="64">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Shubham Khandge</h5>
+                                            <span class="badge badge-warning mb-1">4.5 <i
+                                                    class="fa-regular fa-star"></i></span>
+                                            <p>This product is amazing! Highly recommended.</p>
+                                        </div>
+                                    </li>
+                                    <li class="media mb-4">
+                                        <img src="assets/images/Team/akshay.jpg" class="mr-3 rounded-circle"
+                                            alt="Akshay Kasar" width="64" height="64">
+                                        <div class="media-body">
+                                            <h5 class="mt-0 mb-1">Akshay Kasar</h5>
+                                            <span class="badge badge-warning mb-1">4.5 <i
+                                                    class="fa-regular fa-star"></i></span>
+                                            <p>Good value for money. Will buy again.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- Review Form -->
+                                <h4>Leave a Review</h4>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="reviewName">Name</label>
+                                        <input type="text" class="form-control" id="reviewName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reviewRating">Rating</label>
+                                        <select class="form-control" id="reviewRating" required>
+                                            <option>5</option>
+                                            <option>4</option>
+                                            <option>3</option>
+                                            <option>2</option>
+                                            <option>1</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reviewMessage">Review</label>
+                                        <textarea class="form-control" id="reviewMessage" rows="3" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Related Products</h3>
+                <div class="row">
+                    <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 my-1">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Related Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">Related Product 1</a>
+                                </h5>
+                                <p class="card-text">$99.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 my-1">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Related Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">Related Product 2</a>
+                                </h5>
+                                <p class="card-text">$89.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 my-1">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Related Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">Related Product 3</a>
+                                </h5>
+                                <p class="card-text">$79.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 my-1">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Related Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">Related Product 4</a>
+                                </h5>
+                                <p class="card-text">$69.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="p-4 bg-light text-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text-warning text-decoration-none" href="index.html">
+                        <h5 style="font-size: 30px; font-weight: 500;"><strong class="text-dark">Tech</strong>Labs<b
+                                class="text-dark">.</b></h5>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>Designed and built with all the love in the world by the TechLabs. team with the help
+                                of our contributors.</p>
+                        </li>
+                        <li>
+                            <p>Code licensed MIT, docs CC BY 3.0.</p>
+                        </li>
+                        <li>
+                            <p>Analytics by Shubham Khandge.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about-us.html" class="text-dark">About Us</a></li>
+                        <li><a href="shop.html" class="text-dark">Shop</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact-us.html" class="text-dark">Email</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Phone</a></li>
+                        <li><a href="contact-us.html" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-3">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center col-md-12 py-2" style="font-size: 20px;"><b>&copy;</b>2024
+                        <strong>Tech</strong><b class="text-warning">Labs</b><b>.</b> All rights reserved.
+                    </p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <h5>Follow Us</ h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const thumbnails = document.querySelectorAll('.product-gallery .thumbnail img');
+            const mainImage = document.getElementById('mainImage');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', (event) => {
+                    // Remove 'active' class from all thumbnails
+                    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    // Add 'active' class to the clicked thumbnail
+                    event.target.classList.add('active');
+                    // Update the main image source
+                    mainImage.src = event.target.getAttribute('data-large-src');
+                });
+            });
+
+            // Product Tabs
+            const tabButtons = document.querySelectorAll('#productTab button');
+            const tabContent = document.querySelectorAll('.tab-content .tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    // Remove 'active' class from all tab buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add 'active' class to the clicked button
+                    button.classList.add('active');
+                    // Hide all tab content
+                    tabContent.forEach(tab => tab.classList.remove('show', 'active'));
+                    // Show the selected tab content
+                    const target = document.querySelector(button.getAttribute('data-bs-target'));
+                    target.classList.add('show', 'active');
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            // Add to Cart button
+            document.querySelector('.btn-add-to-cart').addEventListener('click', () => {
+                alert('Added to Cart!');
+            });
+
+            // Buy Now button
+            document.querySelector('.btn-buy-now').addEventListener('click', () => {
+                alert('Proceeding to Buy Now!');
+            });
+
+            // View Details button (if any)
+            document.querySelectorAll('.btn-view-details').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Viewing Product Details!');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

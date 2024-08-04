@@ -26,6 +26,36 @@
         /* .card {
             margin: 10px 0px;
         } */
+        .card-title a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            color: red;
+        }
+
+        .mega-menu {
+            position: static !important;
+        }
+
+        .mega-menu .dropdown-menu {
+            margin-top: 0;
+            border: none;
+            box-shadow: none;
+            width: auto;
+            left: 0;
+            right: 0;
+            border-radius: 0;
+        }
+
+        .mega-menu .dropdown-menu .row {
+            margin: 0;
+        }
+
+        .mega-menu .dropdown-menu .col {
+            padding: 15px;
+        }
     </style>
 </head>
 
@@ -72,6 +102,141 @@
             </div>
         </div>
     </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="megaMenuDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mega Menu</a>
+                    <div class="dropdown-menu bg-transparent" aria-labelledby="megaMenuDropdown">
+                        <div class="container bg-light">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Section 1</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                                    <a class="dropdown-item" href="#">Submenu item 3</a>
+                                </div>
+                                <div class="col">
+                                    <h5>Section 2</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                                </div>
+                                <div class="col">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="megaMenuDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Electronics</a>
+                    <ul class="dropdown-menu bg-transparent" aria-labelledby="electronicsDropdown">
+                        <div class="container" style="background-color:#5bc0de;">
+                            <div class="row">
+                                <div class="col col-md-4">
+                                    <h5>Section 1</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                                    <a class="dropdown-item" href="#">Submenu item 3</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 2</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+                                <div class="col col-md-4">
+                                    <h5>Section 3</h5>
+                                    <a class="dropdown-item" href="#">Submenu item 7</a>
+                                    <a class="dropdown-item" href="#">Submenu item 8</a>
+                                    <a class="dropdown-item" href="#">Submenu item 9</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="tvsDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        TVs & Appliances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="tvsDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <!-- Add more dropdowns here for other categories -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Baby & Kids</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home & Furniture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sports, Books & More</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Offer Zone</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
@@ -122,17 +287,18 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <!-- Breadcrumb Navigation -->
-    <!-- <nav aria-label="breadcrumb" class="bg-light py-2">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Shop</li>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-dark">
+        <div class="container bg-dark">
+            <ol class="breadcrumb bg-dark">
+                <li class="breadcrumb-item text-white"><a href="index.html" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Shop</li>
             </ol>
         </div>
-    </nav> -->
+    </nav>
 
+    <!-- Hero Section -->
     <section id="hero-shop" class="d-flex align-items-center"
         style="background: url('assets/img/shop-hero.jpg') center center / cover no-repeat;">
         <div class="container text-center">
@@ -146,64 +312,169 @@
     <section id="product-filters" class="py-4">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3">
-                    <h4>Categories</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="#" class="category-filter"
-                                data-category="Mobiles and Accessories">Mobiles and Accessories</a></li>
-                        <li class="list-group-item"><a href="#" class="category-filter"
-                                data-category="Computers Accessories">Computers Accessories</a></li>
-                        <li class="list-group-item"><a href="#" class="category-filter"
-                                data-category="Gaming Accessories">Gaming Accessories</a></li>
-                    </ul>
-                    <h4 class="mt-4">Price Range</h4>
-                    <input type="range" class="form-control-range" id="priceRange" min="500" max="10000" step="1">
-                    <p class="mb-0">Price: $<span id="priceValue">500</span></p>
-                    <h4 class="mt-4">Sort By</h4>
-                    <select class="form-control" id="sortOptions">
-                        <option value="low-high">Price: Low to High</option>
-                        <option value="high-low">Price: High to Low</option>
-                        <option value="best-selling">Best Selling</option>
-                        <option value="new-arrivals">New Arrivals</option>
-                        <option value="rating">Rating</option>
-                    </select>
+                <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-3">
+                    <div class="mb-3">
+                        <h4>Search Products</h4>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search for products...">
+                    </div>
+                    <div class="mb-3">
+                        <h4>Categories</h4>
+                        <select class="form-control" id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="Mobiles and Accessories">Mobiles and Accessories</option>
+                            <option value="Computers Accessories">Computers Accessories</option>
+                            <option value="Gaming Accessories">Gaming Accessories</option>
+                        </select>
+                    </div>
+                    <!-- <h4 class="mt-4">Price Range</h4>
+                    <input type="range" class="form-control-range" id="priceRange" min="250" max="10000">
+                    <p class="mb-0">Price: $<span id="priceValue">500</span></p> -->
+
+                    <div class="mb-3">
+                        <h4>Price Range</h4>
+                        <select class="form-control price-filter" id="priceFilter">
+                            <option value="20000">₹.20000 Up to ₹.10000</option>
+                            <option value="1000">₹.1000 Up to ₹.5000</option>
+                            <option value="500">₹.500 Up to ₹.1000</option>
+                            <option value="200">₹.200 Up to ₹.500</option>
+                            <option value="100">₹.100 Up to ₹.200</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <h4>Sort By</h4>
+                        <select class="form-control" id="sortOptions">
+                            <option value="default">Sort by</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                            <option value="best-selling">Best Selling</option>
+                            <option value="new-arrivals">New Arrivals</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="col-md-9">
                     <div class="row" id="productGrid">
-                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 bg-danger border product-card"
-                            data-category="Mobiles and Accessories" data-price="550" data-rating="4.5" data-new="true"
-                            data-bestseller="true">
-                            <div class="card h-100">
-                                <img src="assets/images/product/p1.jpg" class="card-img-top img-fluid border p-3"
-                                    alt="Product 1">
+                        <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                            data-category="Mobiles and Accessories" data-price="5000" data-rating="5" data-new="true"
+                            data-bestseller="false">
+                            <div class="card">
+                                <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                    alt="SONY PlayStation 5 console 825 GB">
                                 <div class="card-body">
-                                    <h5 class="card-title">Product 1</h5>
-                                    <p class="card-text">₹.550</p>
-                                    <!-- <div class="mb-2">
-                                        <span class="badge badge-warning">4.5 <i class="fas fa-star"></i></span>
-                                    </div> -->
-                                    <div class="d-grid">
-                                        <a href="#" class="btn btn-primary w-100 my-1">Add to Cart</a>
-                                        <a href="#" class="btn btn-secondary w-100 my-1">View Details</a>
+                                    <h5 class="card-title">
+                                        <a href="#">SONY PlayStation 5 console</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-warning mb-1">4.5 <i
+                                                class="fa-regular fa-star"></i></span><br>
+                                        <b>₹.</b> 10000
+                                    </p>
+                                    <div class="d-grid justify-content-between align-items-center">
+                                        <a
+                                            class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                                class="fas fa-cart-plus"></i> Add to Cart</a>
+                                        <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                                class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-12 bg-danger border product-card"
-                            data-category="Mobiles and Accessories" data-price="200" data-rating="4.8" data-new="true"
-                            data-bestseller="true">
-                            <div class="card h-100">
-                                <img src="assets/images/product/p2.jpg" class="card-img-top img-fluid border p-3"
-                                    alt="Product 2">
+                        <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                            data-category="Computers Accessories" data-price="200" data-rating="5" data-new="true"
+                            data-bestseller="false">
+                            <div class="card">
+                                <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                    alt="SONY PlayStation 5 console 825 GB  (NA)">
                                 <div class="card-body">
-                                    <h5 class="card-title">Product 2</h5>
-                                    <p class="card-text">₹.200</p>
-                                    <!-- <div class="mb-2">
-                                        <span class="badge badge-warning">4.5 <i class="fas fa-star"></i></span>
-                                    </div> -->
-                                    <div class="d-grid">
-                                        <a href="#" class="btn btn-primary w-100 my-1">Add to Cart</a>
-                                        <a href="#" class="btn btn-secondary w-100 my-1">View Details</a>
+                                    <h5 class="card-title">
+                                        <a href="#">SONY PlayStation 5 console</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-warning mb-1">4.5 <i
+                                                class="fa-regular fa-star"></i></span><br>
+                                        <b>₹.</b> 200
+                                    </p>
+                                    <div class="d-grid justify-content-between align-items-center">
+                                        <a
+                                            class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                                class="fas fa-cart-plus"></i> Add to Cart</a>
+                                        <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                                class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                            data-category="Mobiles and Accessories" data-price="10000" data-rating="5" data-new="true"
+                            data-bestseller="false">
+                            <div class="card">
+                                <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                    alt="SONY PlayStation 5 console 825 GB  (NA)">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="#">SONY PlayStation 5 console</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-warning mb-1">4.5 <i
+                                                class="fa-regular fa-star"></i></span><br>
+                                        <b>₹.</b> 10000
+                                    </p>
+                                    <div class="d-grid justify-content-between align-items-center">
+                                        <a
+                                            class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                                class="fas fa-cart-plus"></i> Add to Cart</a>
+                                        <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                                class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                            data-category="Computers Accessories" data-price="450" data-rating="5" data-new="false
+                            data-bestseller=" true>
+                            <div class="card">
+                                <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                    alt="SONY PlayStation 5 console 825 GB  (NA)">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="#">SONY PlayStation 5 console</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-warning mb-1">4.5 <i
+                                                class="fa-regular fa-star"></i></span><br>
+                                        <b>₹.</b> 450
+                                    </p>
+                                    <div class="d-grid justify-content-between align-items-center">
+                                        <a
+                                            class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                                class="fas fa-cart-plus"></i> Add to Cart</a>
+                                        <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                                class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card" data-category="Gaming Accessories"
+                            data-price="950" data-rating="5" data-new="true" data-bestseller="false">
+                            <div class="card">
+                                <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                    alt="Acer PlayStation 5 console 825 GB  (NA)">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="#">Acer PlayStation 5 console</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge badge-warning mb-1">4.5 <i
+                                                class="fa-regular fa-star"></i></span><br>
+                                        <b>₹.</b> 950
+                                    </p>
+                                    <div class="d-grid justify-content-between align-items-center">
+                                        <a
+                                            class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                                class="fas fa-cart-plus"></i> Add to Cart</a>
+                                        <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                                class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -214,21 +485,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Pagination -->
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-    </nav>
 
 
     <!-- Footer -->
@@ -338,57 +594,57 @@
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const authModalLabel = document.getElementById('authModalLabel');
-            const loginForm = document.getElementById('loginForm');
-            const registerForm = document.getElementById('registerForm');
-            const showLoginForm = document.getElementById('showLoginForm');
-            const showRegisterForm = document.getElementById('showRegisterForm');
-
-            showLoginForm.addEventListener('click', function () {
-                authModalLabel.textContent = 'Login';
-                loginForm.style.display = 'block';
-                registerForm.style.display = 'none';
-            });
-
-            showRegisterForm.addEventListener('click', function () {
-                authModalLabel.textContent = 'Register';
-                loginForm.style.display = 'none';
-                registerForm.style.display = 'block';
-            });
-        });
-    </script>
-    <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
             const productCards = document.querySelectorAll('.product-card');
-            const categoryFilters = document.querySelectorAll('.category-filter');
-            const priceRange = document.getElementById('priceRange');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const priceFilter = document.getElementById('priceFilter');
             const sortOptions = document.getElementById('sortOptions');
+            // const paginationLinks = document.querySelectorAll('.pagination .page-link');
 
-            // Filter by Category
-            categoryFilters.forEach(filter => {
-                filter.addEventListener('click', event => {
-                    event.preventDefault();
-                    const category = filter.getAttribute('data-category');
-                    filterProducts(category, priceRange.value, sortOptions.value);
+            const productsPerPage = 3;
+            let currentPage = 1;
+
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+                filterProducts(query);
+            });
+
+            function filterProducts(query) {
+                productCards.forEach(card => {
+                    const title = card.querySelector('.card-title a').textContent.toLowerCase();
+                    if (title.includes(query)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
                 });
+            }
+
+            categoryFilter.addEventListener('change', () => {
+                filterProducts(categoryFilter.value, priceFilter.value, sortOptions.value);
             });
 
-            priceRange.addEventListener('input', function () {
-                priceValue.textContent = priceRange.value;
-                filterProducts();
+            priceFilter.addEventListener('change', () => {
+                filterProducts(categoryFilter.value, priceFilter.value, sortOptions.value);
             });
 
-            // Filter by Price Range
-            priceRange.addEventListener('input', () => {
-                const category = document.querySelector('.category-filter.active')?.getAttribute('data-category') || 'all';
-                filterProducts(category, priceRange.value, sortOptions.value);
-            });
-
-            // Sort Products
             sortOptions.addEventListener('change', () => {
-                const category = document.querySelector('.category-filter.active')?.getAttribute('data-category') || 'all';
-                filterProducts(category, priceRange.value, sortOptions.value);
+                filterProducts(categoryFilter.value, priceFilter.value, sortOptions.value);
+            });
+
+            // Pagination
+            paginationLinks.forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+                    const page = link.getAttribute('data-page');
+                    if (page === 'next') {
+                        currentPage++;
+                    } else {
+                        currentPage = parseInt(page);
+                    }
+                    filterProducts();
+                });
             });
 
             function filterProducts(category, maxPrice, sortOption) {
@@ -400,9 +656,18 @@
 
                 sortProducts(filteredProducts, sortOption);
 
+                // Pagination logic
+                const start = (currentPage - 1) * productsPerPage;
+                const end = start + productsPerPage;
+                const paginatedProducts = filteredProducts.slice(start, end);
+
                 document.getElementById('productGrid').innerHTML = '';
-                filteredProducts.forEach(product => document.getElementById('productGrid').appendChild(product));
+                // filteredProducts.forEach(product => document.getElementById('productGrid').appendChild(product));
+                paginatedProducts.forEach(product => document.getElementById('productGrid').appendChild(product));
+
+                updatePaginationLinks(filteredProducts.length);
             }
+
 
             function sortProducts(products, sortOption) {
                 switch (sortOption) {
@@ -426,13 +691,71 @@
                 }
             }
 
+            function updatePaginationLinks(totalProducts) {
+                const totalPages = Math.ceil(totalProducts / productsPerPage);
+                const paginationList = document.querySelector('.pagination');
+                paginationList.innerHTML = '';
+
+                // Previous button
+                const prevItem = document.createElement('li');
+                prevItem.classList.add('page-item', currentPage === 1 ? 'disabled' : '');
+                const prevLink = document.createElement('a');
+                prevLink.classList.add('page-link');
+                prevLink.href = '#';
+                prevLink.textContent = 'Previous';
+                prevLink.setAttribute('data-page', 'prev');
+                prevItem.appendChild(prevLink);
+                paginationList.appendChild(prevItem);
+
+                // Page numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageItem = document.createElement('li');
+                    pageItem.classList.add('page-item', i === currentPage ? 'active' : '');
+                    const pageLink = document.createElement('a');
+                    pageLink.classList.add('page-link');
+                    pageLink.href = '#';
+                    pageLink.textContent = i;
+                    pageLink.setAttribute('data-page', i);
+                    pageItem.appendChild(pageLink);
+                    paginationList.appendChild(pageItem);
+                }
+
+                // Next button
+                const nextItem = document.createElement('li');
+                nextItem.classList.add('page-item', currentPage === totalPages ? 'disabled' : '');
+                const nextLink = document.createElement('a');
+                nextLink.classList.add('page-link');
+                nextLink.href = '#';
+                nextLink.textContent = 'Next';
+                nextLink.setAttribute('data-page', 'next');
+                nextItem.appendChild(nextLink);
+                paginationList.appendChild(nextItem);
+            }
+
+
             // Initialize filters with default values
-            filterProducts('all', priceRange.value, sortOptions.value);
+            filterProducts(categoryFilter.value, priceFilter.value, sortOptions.value);
+
+            // Add to Cart, Buy Now, View Details event handlers
+            document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Added to Cart!');
+                });
+            });
+
+            document.querySelectorAll('.btn-buy-now').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Proceeding to Buy Now!');
+                });
+            });
+
+            document.querySelectorAll('.btn-view-details').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Viewing Product Details!');
+                });
+            });
         });
     </script>
-
-
-
 </body>
 
 </html>

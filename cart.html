@@ -23,9 +23,22 @@
             background-attachment: fixed;
         }
 
-        /* .card {
-            margin: 10px 0px;
-        } */
+        .card-title a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            color: red;
+        }
+
+        .product-card {
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
@@ -68,8 +81,126 @@
             </div>
         </div>
     </header>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="bg-light py-2">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+            </ol>
+        </div>
+    </nav>
 
-    
+    <!-- Shopping Cart Section -->
+    <section id="shopping-cart" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Shopping Cart</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Example Cart Item -->
+                            <tr class="cart-item" data-id="1" data-price="19.99">
+                                <td>
+                                    <img src="assets/img/product1.jpg" alt="Product 1" class="img-fluid" width="50">
+                                    <span>Product 1</span>
+                                </td>
+                                <td>$19.99</td>
+                                <td>
+                                    <input type="number" class="form-control quantity" value="1" min="1">
+                                </td>
+                                <td class="item-total">$19.99</td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm remove-item">Remove</button>
+                                </td>
+                            </tr>
+                            <!-- Repeat for other cart items -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cart Summary</h5>
+                            <p class="card-text">Subtotal: $<span id="cart-subtotal">19.99</span></p>
+                            <p class="card-text">Total: $<span id="cart-total">19.99</span></p>
+                            <button class="btn btn-primary btn-block">Proceed to Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="bg-dark">
+        <div class="container bg-dark">
+            <ol class="breadcrumb bg-dark">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                <li class="breadcrumb-item"><a href="shop.html" class="text-decoration-none text-white">Shop</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="product-info.html"
+                        class="text-decoration-none text-white">Product Page</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Cart</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Section -->
+    <section id="shopping-cart" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="mb-4">Shopping Cart</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cartItems">
+                                <!-- Cart items will be dynamically generated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="mb-4">Summary</h2>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Subtotal</span>
+                            <strong id="subtotal">$0.00</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Tax</span>
+                            <strong id="tax">$0.00</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong id="total">$0.00</strong>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary btn-block">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
     <footer class="p-4 bg-light text-dark">
@@ -175,15 +306,112 @@
                 }
             })
         });
-
-
-
-        // Update the price range value display
-        document.getElementById('priceRange').addEventListener('input', function () {
-            document.getElementById('priceValue').textContent = this.value;
-        });
-
     </script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItems = [
+                { id: 1, name: 'Product 1', price: 19.99, quantity: 1 },
+                { id: 2, name: 'Product 2', price: 29.99, quantity: 2 },
+                { id: 3, name: 'Product 3', price: 39.99, quantity: 1 },
+            ];
+
+            function renderCartItems() {
+                const cartItemsContainer = document.getElementById('cartItems');
+                cartItemsContainer.innerHTML = '';
+
+                cartItems.forEach(item => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>$${item.price.toFixed(2)}</td>
+                        <td>
+                            <input type="number" class="form-control quantity-input" data-id="${item.id}" value="${item.quantity}" min="1">
+                        </td>
+                        <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm remove-item" data-id="${item.id}">Remove</button>
+                        </td>
+                    `;
+
+                    cartItemsContainer.appendChild(row);
+                });
+
+                updateCartSummary();
+            }
+
+            function updateCartSummary() {
+                const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const tax = subtotal * 0.1;  // Assuming a 10% tax rate
+                const total = subtotal + tax;
+
+                document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+                document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+                document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            }
+
+            document.addEventListener('change', (event) => {
+                if (event.target.classList.contains('quantity-input')) {
+                    const itemId = parseInt(event.target.getAttribute('data-id'));
+                    const newQuantity = parseInt(event.target.value);
+
+                    const item = cartItems.find(item => item.id === itemId);
+                    if (item) {
+                        item.quantity = newQuantity;
+                        renderCartItems();
+                    }
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (event.target.classList.contains('remove-item')) {
+                    const itemId = parseInt(event.target.getAttribute('data-id'));
+
+                    const itemIndex = cartItems.findIndex(item => item.id === itemId);
+                    if (itemIndex > -1) {
+                        cartItems.splice(itemIndex, 1);
+                        renderCartItems();
+                    }
+                }
+            });
+
+            renderCartItems();
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItems = document.querySelectorAll('.cart-item');
+            const cartSubtotal = document.getElementById('cart-subtotal');
+            const cartTotal = document.getElementById('cart-total');
+
+            function updateCart() {
+                let subtotal = 0;
+                cartItems.forEach(item => {
+                    const quantity = item.querySelector('.quantity').value;
+                    const price = parseFloat(item.getAttribute('data-price'));
+                    const itemTotal = price * quantity;
+                    item.querySelector('.item-total').textContent = `$${itemTotal.toFixed(2)}`;
+                    subtotal += itemTotal;
+                });
+                cartSubtotal.textContent = subtotal.toFixed(2);
+                cartTotal.textContent = subtotal.toFixed(2);
+            }
+
+            cartItems.forEach(item => {
+                item.querySelector('.quantity').addEventListener('change', () => {
+                    updateCart();
+                });
+
+                item.querySelector('.remove-item').addEventListener('click', () => {
+                    item.remove();
+                    updateCart();
+                });
+            });
+
+            updateCart();  // Initial calculation on page load
+        });
+    </script>
+
 </body>
 
 </html>

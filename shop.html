@@ -23,9 +23,22 @@
             background-attachment: fixed;
         }
 
-        /* .card {
-            margin: 10px 0px;
-        } */
+        .card-title a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            color: red;
+        }
+
+        .product-card {
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
@@ -73,59 +86,365 @@
     <nav aria-label="breadcrumb" class="bg-dark">
         <div class="container bg-dark">
             <ol class="breadcrumb bg-dark">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Shop</li>
             </ol>
         </div>
     </nav>
 
-
-    <!-- Search and Filter Section -->
-    <section id="search-filter" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <input type="text" id="search-bar" class="form-control" placeholder="Search products...">
+    <div class="container-fluid py-2">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <aside class="col col-md-3">
+                <h5>Filter By</h5>
+                <div class="mb-3">
+                    <h5>Search Products</h5>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
                 </div>
-                <div class="col-md-4 mb-3">
-                    <select id="category-filter" class="form-control">
-                        <option value="">All Categories</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="fashion">Fashion</option>
-                        <option value="home">Home & Kitchen</option>
+
+                <div class="mb-3">
+                    <h5>Categories</h5>
+                    <select class="form-control mb-4" id="categoryFilter">
+                        <option value="all">All</option>
+                        <option value="Mobiles and Accessories">Mobiles and Accessories</option>
+                        <option value="Computers Accessories">Computers Accessories</option>
+                        <option value="Gaming Accessories">Gaming Accessories</option>
                     </select>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <select id="sort-filter" class="form-control">
-                        <option value="default">Sort by</option>
-                        <option value="price-low-high">Price: Low to High</option>
-                        <option value="price-high-low">Price: High to Low</option>
+
+                <div class="mb-3">
+                    <h5>Price</h5>
+                    <select class="form-control mb-4" id="priceFilter">
+                        <option value="20000">₹.20000 Up to ₹.10000</option>
+                        <option value="1000">₹.1000 Up to ₹.5000</option>
+                        <option value="500">₹.500 Up to ₹.1000</option>
+                        <option value="200">₹.200 Up to ₹.500</option>
+                        <option value="100">₹.100 Up to ₹.200</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Product Listings -->
+            <main class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="mb-0">Products</h5>
+                    <select class="form-control w-auto" id="sortOptions">
+                        <option value="default" selected disabled>Sort by</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
                         <option value="rating">Rating</option>
+                        <option value="new-arrivals">New Arrivals</option>
+                        <option value="best-selling">Best Selling</option>
                     </select>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="row" id="productGrid">
+                    <!-- Product Cards -->
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card" data-category="Computers Accessories"
+                        data-price="15000" data-rating="3" data-new="true" data-bestseller="false">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 15000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card" data-category="Computers Accessories"
+                        data-price="150" data-rating="3" data-new="false" data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="SONY PlayStation 5 console 825 GB">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">SONY PlayStation 5 console</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-3 col-lg-3 col-md-4 mb-4 product-card"
+                        data-category="Mobiles and Accessories" data-price="10000" data-rating="4" data-new="true"
+                        data-bestseller="true">
+                        <div class="card">
+                            <img src="assets/images/product/gaming-1.webp" class="card-img-top img-fluid p-3"
+                                alt="Acer">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="product-info.html">Acer</a>
+                                </h5>
+                                <p class="card-text">
+                                    <span class="badge badge-warning mb-1">4.5 <i
+                                            class="fa-regular fa-star"></i></span><br>
+                                    <b>₹.</b> 10000
+                                </p>
+                                <div class="d-grid justify-content-between align-items-center">
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-success btn-add-to-cart my-1 w-100"><i
+                                            class="fas fa-cart-plus"></i> Add to Cart</a>
+                                    <a class="btn btn-xl btn-lg btn-md btn-sm btn-info btn-buy-now my-1 w-100"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Product Grid Section -->
-    <section id="product-grid" class="py-5">
-        <div class="container">
-            <div class="row" id="product-container">
-                <!-- Product cards will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Pagination Section -->
-    <section id="pagination" class="py-5">
-        <div class="container text-center">
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <!-- Pagination items will be dynamically inserted here -->
-                </ul>
-            </nav>
+                <!-- Pagination -->
+                <!-- <nav>
+                    <ul class="pagination justify-content-center" id="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav> -->
+            </main>
         </div>
-    </section>
+    </div>
 
 
     <!-- Footer -->
@@ -206,103 +525,176 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const products = [
-                { id: 1, name: "Product 1", price: 100, category: "electronics", rating: 4.5, image: "assets/images/product/p1.jpg" },
-                { id: 2, name: "Product 2", price: 150, category: "fashion", rating: 4.0, image: "assets/images/product/p2.jpg" },
-                { id: 3, name: "Product 3", price: 200, category: "home", rating: 3.5, image: "assets/images/product/p3.jpg" },
-                { id: 4, name: "Product 4", price: 250, category: "electronics", rating: 5.0, image: "assets/images/product/p4.jpg" },
-                { id: 5, name: "Product 5", price: 300, category: "fashion", rating: 4.5, image: "assets/images/product/p5.jpg" },
-                { id: 6, name: "Product 6", price: 350, category: "home", rating: 4.0, image: "assets/images/product/p6.jpg" },
-                { id: 6, name: "Product 6", price: 350, category: "home", rating: 4.0, image: "assets/images/product/p6.jpg" },
-            ];
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 12,
+                autoplay: true,
+                nav: true,
+                rewindNav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        // nav: true
+                    },
+                    600: {
+                        items: 3,
+                        // nav: true
+                    },
+                    1000: {
+                        items: 4,
+                        // nav: true,
+                        // loop: true
+                    }
+                }
+            })
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const productCards = document.querySelectorAll('.product-card');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const priceFilter = document.getElementById('priceFilter');
+            const sortOptions = document.getElementById('sortOptions');
+            const pagination = document.getElementById('pagination');
 
+            const productsPerPage = 8;
             let currentPage = 1;
-            const itemsPerPage = 12;
 
-            function renderProducts() {
-                const productContainer = document.getElementById('product-container');
-                productContainer.innerHTML = "";
+            searchInput.addEventListener('input', () => {
+                const searchText = searchInput.value.toLowerCase();
 
-                const filteredProducts = getFilteredProducts();
-                const paginatedProducts = paginate(filteredProducts, currentPage, itemsPerPage);
+                productCards.forEach(card => {
+                    const productName = card.querySelector('.card-title a').textContent.toLowerCase();
+                    if (productName.includes(searchText)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
 
-                paginatedProducts.forEach(product => {
-                    const productCard = document.createElement('div');
-                    productCard.classList.add('col', 'col-xl-3', 'col-lg-3', 'col-md-4', 'col-sm-12', 'mb-4');
-                    productCard.innerHTML = `
-                          <div class="card h-100">
-                              <img src="${product.image}" class="card-img-top img-fluid p-3" alt="${product.name}">
-                              <div class="card-body">
-                                  <h5 class="card-title">${product.name}</h5>
-                                  <p class="card-text">₹ ${product.price}</p>
-                                  <p class="card-text">Rating: ${product.rating}</p>
-                                  <a href="cart.html" class="btn btn-primary">Add to Cart</a>
-                              </div>
-                          </div>
-                      `;
-                    productContainer.appendChild(productCard);
+            // Filter by Category
+            categoryFilter.addEventListener('change', () => {
+                filterProducts();
+            });
+
+            // Filter by Price
+            priceFilter.addEventListener('change', () => {
+                filterProducts();
+            });
+
+            // Sort Products
+            sortOptions.addEventListener('change', () => {
+                filterProducts();
+            });
+
+            // Pagination
+            pagination.addEventListener('click', (event) => {
+                if (event.target.tagName === 'A') {
+                    event.preventDefault();
+                    if (event.target.textContent === 'Previous') {
+                        currentPage = Math.max(currentPage - 1, 1);
+                    } else if (event.target.textContent === 'Next') {
+                        currentPage = Math.min(currentPage + 1, Math.ceil(productCards.length / productsPerPage));
+                    } else {
+                        currentPage = parseInt(event.target.textContent);
+                    }
+                    updatePagination();
+                    filterProducts();
+                }
+            });
+
+            function filterProducts() {
+                const category = categoryFilter.value;
+                const maxPrice = parseFloat(priceFilter.value);
+                const sortOption = sortOptions.value;
+
+                let filteredProducts = Array.from(productCards).filter(card => {
+                    const productCategory = card.getAttribute('data-category');
+                    const productPrice = parseFloat(card.getAttribute('data-price'));
+                    return (category === 'all' || productCategory === category) && productPrice <= maxPrice;
                 });
 
-                renderPagination(filteredProducts.length);
+                sortProducts(filteredProducts, sortOption);
+
+                const start = (currentPage - 1) * productsPerPage;
+                const end = start + productsPerPage;
+
+                document.getElementById('productGrid').innerHTML = '';
+                filteredProducts.slice(start, end).forEach(product => document.getElementById('productGrid').appendChild(product));
+
+                updatePagination(filteredProducts.length);
             }
 
-            function renderPagination(totalItems) {
-                const totalPages = Math.ceil(totalItems / itemsPerPage);
-                const paginationContainer = document.querySelector('.pagination');
-                paginationContainer.innerHTML = "";
+            function sortProducts(products, sortOption) {
+                switch (sortOption) {
+                    case 'low-high':
+                        products.sort((a, b) => parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price')));
+                        break;
+                    case 'high-low':
+                        products.sort((a, b) => parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price')));
+                        break;
+                    case 'best-selling':
+                        products.sort((a, b) => b.getAttribute('data-bestseller') === 'true' ? -1 : 1);
+                        break;
+                    case 'new-arrivals':
+                        products.sort((a, b) => b.getAttribute('data-new') === 'true' ? -1 : 1);
+                        break;
+                    case 'rating':
+                        products.sort((a, b) => parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating')));
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            function updatePagination(totalProducts) {
+                const totalPages = Math.ceil(totalProducts / productsPerPage);
+                pagination.innerHTML = '';
+
+                const prevPage = document.createElement('li');
+                prevPage.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+                prevPage.innerHTML = `<a class="page-link" href="#">Previous</a>`;
+                pagination.appendChild(prevPage);
 
                 for (let i = 1; i <= totalPages; i++) {
-                    const paginationItem = document.createElement('li');
-                    paginationItem.classList.add('page-item');
-                    if (i === currentPage) {
-                        paginationItem.classList.add('active');
-                    }
-                    paginationItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-                    paginationItem.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        currentPage = i;
-                        renderProducts();
-                    });
-                    paginationContainer.appendChild(paginationItem);
+                    const pageItem = document.createElement('li');
+                    pageItem.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                    pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                    pagination.appendChild(pageItem);
                 }
+
+                const nextPage = document.createElement('li');
+                nextPage.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+                nextPage.innerHTML = `<a class="page-link" href="#">Next</a>`;
+                pagination.appendChild(nextPage);
             }
 
-            function paginate(items, page, itemsPerPage) {
-                const start = (page - 1) * itemsPerPage;
-                return items.slice(start, start + itemsPerPage);
-            }
-
-            function getFilteredProducts() {
-                const searchQuery = document.getElementById('search-bar').value.toLowerCase();
-                const selectedCategory = document.getElementById('category-filter').value;
-                const sortOption = document.getElementById('sort-filter').value;
-
-                let filteredProducts = products.filter(product => {
-                    return (
-                        product.name.toLowerCase().includes(searchQuery) &&
-                        (selectedCategory === "" || product.category === selectedCategory)
-                    );
+            // Add to Cart, Buy Now, View Details event handlers
+            document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Added to Cart!');
                 });
+            });
 
-                if (sortOption === "price-low-high") {
-                    filteredProducts.sort((a, b) => a.price - b.price);
-                } else if (sortOption === "price-high-low") {
-                    filteredProducts.sort((a, b) => b.price - a.price);
-                } else if (sortOption === "rating") {
-                    filteredProducts.sort((a, b) => b.rating - a.rating);
-                }
+            document.querySelectorAll('.btn-buy-now').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Proceeding to Buy Now!');
+                });
+            });
 
-                return filteredProducts;
-            }
+            document.querySelectorAll('.btn-view-details').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Viewing Product Details!');
+                });
+            });
 
-            document.getElementById('search-bar').addEventListener('input', renderProducts);
-            document.getElementById('category-filter').addEventListener('change', renderProducts);
-            document.getElementById('sort-filter').addEventListener('change', renderProducts);
-
-            renderProducts();
+            // Initialize filters with default values
+            filterProducts();
         });
     </script>
 </body>
