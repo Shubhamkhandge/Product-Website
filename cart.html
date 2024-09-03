@@ -22,23 +22,6 @@
             background-size: cover;
             background-attachment: fixed;
         }
-
-        .card-title a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .card-title a:hover {
-            color: red;
-        }
-
-        .product-card {
-            cursor: pointer;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
     </style>
 </head>
 
@@ -81,69 +64,9 @@
             </div>
         </div>
     </header>
-    <!-- Breadcrumb Navigation -->
-    <nav aria-label="breadcrumb" class="bg-light py-2">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
-            </ol>
-        </div>
-    </nav>
-
-    <!-- Shopping Cart Section -->
-    <section id="shopping-cart" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Shopping Cart</h2>
-            <div class="row">
-                <div class="col-md-8">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody id="cart-items">
-                            <!-- Example Cart Item -->
-                            <tr class="cart-item" data-id="1" data-price="19.99">
-                                <td>
-                                    <img src="assets/img/product1.jpg" alt="Product 1" class="img-fluid" width="50">
-                                    <span>Product 1</span>
-                                </td>
-                                <td>$19.99</td>
-                                <td>
-                                    <input type="number" class="form-control quantity" value="1" min="1">
-                                </td>
-                                <td class="item-total">$19.99</td>
-                                <td>
-                                    <button class="btn btn-danger btn-sm remove-item">Remove</button>
-                                </td>
-                            </tr>
-                            <!-- Repeat for other cart items -->
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Cart Summary</h5>
-                            <p class="card-text">Subtotal: $<span id="cart-subtotal">19.99</span></p>
-                            <p class="card-text">Total: $<span id="cart-total">19.99</span></p>
-                            <button class="btn btn-primary btn-block">Proceed to Checkout</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Breadcrumb Navigation -->
-    <nav aria-label="breadcrumb" class="bg-dark">
+    <!-- <nav aria-label="breadcrumb" class="bg-dark">
         <div class="container bg-dark">
             <ol class="breadcrumb bg-dark">
                 <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
@@ -153,10 +76,10 @@
                 <li class="breadcrumb-item active text-white" aria-current="page">Cart</li>
             </ol>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- Shopping Cart Section -->
-    <section id="shopping-cart" class="bg-light">
+    <section id="shopping-cart" class="bg-light py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -174,6 +97,20 @@
                             </thead>
                             <tbody id="cartItems">
                                 <!-- Cart items will be dynamically generated here -->
+                                <tr class="cart-item" data-id="1" data-price="19.99">
+                                    <td>
+                                        <img src="assets/images/product/p-1.jpg" alt="Product 1" class="img-fluid" width="50">
+                                        <span>Product 1</span>
+                                    </td>
+                                    <td>$19.99</td>
+                                    <td>
+                                        <input type="number" class="form-control quantity" value="1" min="1">
+                                    </td>
+                                    <td class="item-total">$19.99</td>
+                                    <td>
+                                        <button class="btn btn-danger btn-sm remove-item">Remove</button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -199,8 +136,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="p-4 bg-light text-dark">
